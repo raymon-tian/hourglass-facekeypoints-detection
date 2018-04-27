@@ -111,7 +111,7 @@ class KFDataset(Dataset):
             return x,gt #返回图像以及其id
 
 
-        heatmaps = self._putGaussianMaps(gt,H,W,1,self.__sigma)
+        heatmaps = self._putGaussianMaps(gt,False,H,W,1,self.__sigma)
 
         if self.__debug_vis == True:
             for i in range(heatmaps.shape[0]):
